@@ -5,6 +5,11 @@ theme = "blow"
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = true
 
+taxonomies = [
+    {name = "tags", paginate_by = 5, feed = true},
+    {name = "categories", paginate_by = 5, feed = true},
+]
+
 # Whether to build a search index to be used later on by a JavaScript library
 build_search_index = true
 
