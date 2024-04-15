@@ -27,7 +27,7 @@
       <link href='{{ config.extra.favicon.apple_touch_icon }}' rel="apple-touch-icon" sizes="180x180" />
       {% endif %}
 
-      <link href="{{ base_url }}/css/main.css" rel="stylesheet">
+      <link href="{{ config.base_url }}/css/main.css" rel="stylesheet">
       <link id="syntax_highlight" href="#" rel="stylesheet">
 
       <title>
@@ -177,7 +177,7 @@
               {% for item in config.extra.lang.items %}
                 {% if lang == item.lang %}
                   {% for link in item.links %}
-                    <a class="flex justify-center py-2 hover:text-gray-800 dark:hover:text-white" href="{{ link.base_url }}">{{ link.name }}</a>
+                    <a class="flex justify-center py-2 hover:text-gray-800 dark:hover:text-white" href="{{ link.config.base_url }}">{{ link.name }}</a>
                   {% endfor %}
                 {% endif %}
               {% endfor %}
@@ -311,11 +311,11 @@
   </footer>
 
   <!------------------------- SCRIPTS ------------------------->
-  <script defer src="{{ base_url }}/js/main.js"></script>
+  <script defer src="{{ config.base_url }}/js/main.js"></script>
   {% if config.extra.zt.enable_search %}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/elasticlunr/0.9.6/elasticlunr.min.js"></script>
-    <script src="{{ base_url }}/search_index.{{lang}}.js"></script>
-    <script defer src="{{ base_url }}/js/search.js"></script>
+    <script src="{{ config.base_url }}/search_index.{{lang}}.js"></script>
+    <script defer src="{{ config.base_url }}/js/search.js"></script>
   {% endif %}
   {% if config.extra.zt.enable_multilingue %}
     <script defer src="/js/lang.js"></script>
