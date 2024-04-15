@@ -27,7 +27,7 @@
       <link href='{{ config.extra.favicon.apple_touch_icon }}' rel="apple-touch-icon" sizes="180x180" />
       {% endif %}
 
-      <link href="/css/main.css" rel="stylesheet">
+      <link href="{{ base_url }}/css/main.css" rel="stylesheet">
       <link id="syntax_highlight" href="#" rel="stylesheet">
 
       <title>
@@ -311,11 +311,11 @@
   </footer>
 
   <!------------------------- SCRIPTS ------------------------->
-  <script defer src="/js/main.js"></script>
+  <script defer src="{{ base_url }}/js/main.js"></script>
   {% if config.extra.zt.enable_search %}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/elasticlunr/0.9.6/elasticlunr.min.js"></script>
-    <script src="/search_index.{{lang}}.js"></script>
-    <script defer src="/js/search.js"></script>
+    <script src="{{ base_url }}/search_index.{{lang}}.js"></script>
+    <script defer src="{{ base_url }}/js/search.js"></script>
   {% endif %}
   {% if config.extra.zt.enable_multilingue %}
     <script defer src="/js/lang.js"></script>
