@@ -28,6 +28,7 @@
       {% endif %}
 
       <link href="{{ config.base_url }}/css/main.css" rel="stylesheet">
+      <link href="{{ config.base_url }}/css/fonts.css" rel="stylesheet">
       <link id="syntax_highlight" href="#" rel="stylesheet">
 
       <title>
@@ -295,7 +296,7 @@
       </div>
     </div> -->
     <div class="mt-16 border-t-2 border-gray-300 flex flex-col items-center">
-      <div class="sm:w-2/3 text-center py-6">
+      <div class="sm:w-2/3 text-center py-6 dark:text-white">
         {% set categories = get_taxonomy(kind="categories") %}
         {% for item in categories.items %}
           <a
