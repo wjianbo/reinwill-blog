@@ -24,3 +24,6 @@ highlight_code = false
 
 [extra]
 # Put all your custom variables here
+logo = "logo.png"
+description = "帝禹江河湖海流，辛壬癸甲"
+description2 = "置身家国天下事，以吾知名"

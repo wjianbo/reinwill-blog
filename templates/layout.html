@@ -46,7 +46,7 @@
   <!---------------------------------------------------------->
   <!------------------------- NAVBAR ------------------------->
   <!---------------------------------------------------------->
-  <nav id="navbar" class="bg-gray-200 dark:bg-gray-800">
+  <nav id="navbar" class="py-4">
     <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
       <div class="relative flex items-center justify-between h-16">
         <div class="flex items-center sm:hidden">
@@ -77,22 +77,16 @@
         </div>
         <div class="flex-1 flex items-center">
           <div class="flex-shrink-0 flex items-center ml-2">
-            <a href="/" class="text-xl text-gray-800 dark:text-white">{{config.extra.navbar.title}}</a>
-            <!-- <img class="block lg:hidden h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg" alt="Workflow">
-            <img class="hidden lg:block h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-logo-indigo-500-mark-white-text.svg" alt="Workflow"> -->
+            <!--<a href="/" class="text-xl text-gray-800 dark:text-white">{{config.title}}</a>-->
+            <img class="hidden lg:block h-14 w-auto" src="{{config.extra.logo}}" alt="{{config.title}}">
+            <div class="text-sm text-gray-500 dark:text-white px-2">
+              <p>{{config.extra.description}}</p>
+              <p>{{config.extra.description2}}</p>
+            </div>
           </div>
           <div class="hidden sm:block sm:ml-6">
             <div class="nav-links flex space-x-4">
               <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-              {% for item in config.extra.navbar.items %}
-              {% if lang == item.lang %}
-              {% for link in item.links %}
-              <a href="{{ link.url }}"
-                class="text-gray-800 dark:text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">{{
-                link.name }}</a>
-              {% endfor %}
-              {% endif %}
-              {% endfor %}
 
               {% if config.extra.zt.enable_sidebar %}
               <!-- More ... Button (sidebar) -->
@@ -327,12 +321,12 @@
       <div class="h-px flex-auto bg-gray-700 dark:bg-white"></div>
     </div>
     <div class="mt-3 flex flex-col items-center">
-    {% set categories = get_taxonomy(kind="categories") %}
-    <div class="container mx-auto px-6">
-      <div class="mt-8 sm:mt-0 sm:w-full sm:px-8 flex flex-col md:flex-row justify-center divide-x">
-        {% for item in categories.items %}
-        <div class="px-1 flex flex-col">
-          <div x-data="{
+      {% set categories = get_taxonomy(kind="categories") %}
+      <div class="container mx-auto px-6">
+        <div class="mt-8 sm:mt-0 sm:w-full sm:px-8 flex flex-col md:flex-row justify-center divide-x">
+          {% for item in categories.items %}
+          <div class="px-1 flex flex-col">
+            <div x-data="{
             open: false,
             toggle() {
                 if (this.open) {
@@ -351,30 +345,30 @@
                 focusAfter && focusAfter.focus()
             }
         }" x-on:keydown.escape.prevent.stop="close($refs.button)"
-            x-on:focusin.window="! $refs.panel.contains($event.target) && close()" x-id="['dropdown-button']"
-            class="relative">
-            <!-- Button -->
-            <button x-ref="button" x-on:click="toggle()" :aria-expanded="open" :aria-controls="$id('dropdown-button')"
-              type="button" class="flex items-center gap-2 px-5 font-bold text-gray-700 dark:text-white">
-              {{item.name}}
-            </button>
+              x-on:focusin.window="! $refs.panel.contains($event.target) && close()" x-id="['dropdown-button']"
+              class="relative">
+              <!-- Button -->
+              <button x-ref="button" x-on:click="toggle()" :aria-expanded="open" :aria-controls="$id('dropdown-button')"
+                type="button" class="flex items-center gap-2 px-5 font-bold text-gray-700 dark:text-white">
+                {{item.name}}
+              </button>
 
-            <!-- Panel -->
-            <div x-ref="panel" x-show="open" x-transition.origin.top.left x-on:click.outside="close($refs.button)"
-              :id="$id('dropdown-button')" style="display: none;bottom: 2em; left: 0;"
-              class="absolute left-0 mt-2 w-40 rounded-md shadow-md dark:text-white">
-              {% for page in item.pages %}
-              <a href="{{page.permalink}}"
-                class="flex items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left text-sm hover:bg-gray-50 disabled:text-gray-500">
-                {{page.title}}
-              </a>
-              {% endfor %}
+              <!-- Panel -->
+              <div x-ref="panel" x-show="open" x-transition.origin.top.left x-on:click.outside="close($refs.button)"
+                :id="$id('dropdown-button')" style="display: none;bottom: 2em; left: 0;"
+                class="absolute left-0 mt-2 w-40 rounded-md shadow-md dark:text-white">
+                {% for page in item.pages %}
+                <a href="{{page.permalink}}"
+                  class="flex items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left text-sm hover:bg-gray-50 disabled:text-gray-500">
+                  {{page.title}}
+                </a>
+                {% endfor %}
+              </div>
             </div>
           </div>
+          {% endfor %}
         </div>
-        {% endfor %}
       </div>
-    </div>
       <div class="sm:w-2/3 text-center py-6 dark:text-white">
         <p class="text-sm text-black dark:text-white font-bold mb-2">
           © 2021 blow theme made with <a href="https://tailwindcss.com/" target="_blank">tailwindcss</a> for <a
