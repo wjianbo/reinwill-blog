@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh">
+    <title>reinwill - 文化</title>
+    <subtitle>A blog about web development, devops</subtitle>
+    <link href="https://wjianbo.github.io/reinwill-blog/categories/wen-hua/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://wjianbo.github.io/reinwill-blog"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2018-07-09T00:00:00+00:00</updated>
+    <id>https://wjianbo.github.io/reinwill-blog/categories/wen-hua/atom.xml</id>
+    <entry xml:lang="zh">
+        <title>易学</title>
+        <published>2018-07-09T00:00:00+00:00</published>
+        <updated>2018-07-09T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://wjianbo.github.io/reinwill-blog/culture/yi-xue/" type="text/html"/>
+        <id>https://wjianbo.github.io/reinwill-blog/culture/yi-xue/</id>
+        
+        <content type="html">&lt;h3 id=&quot;ding-yi&quot;&gt;定义：&lt;&#x2F;h3&gt;
+&lt;p&gt;研究事物运行的规律&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;yi-yi&quot;&gt;意义：&lt;&#x2F;h3&gt;
+&lt;p&gt;中华文化源头&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;cheng-guo&quot;&gt;成果：&lt;&#x2F;h3&gt;
+&lt;p&gt;载天地人三才之道&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;zhu-zhang&quot;&gt;主张：&lt;&#x2F;h3&gt;
+&lt;p&gt;天人合一&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;qi-yuan&quot;&gt;起源：&lt;&#x2F;h3&gt;
+&lt;p&gt;河图、洛书&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;kuang-jia&quot;&gt;框架：&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;象：观察现象&lt;&#x2F;li&gt;
+&lt;li&gt;数：分析数据&lt;&#x2F;li&gt;
+&lt;li&gt;理：推断原理&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;zhi-pai&quot;&gt;支派：&lt;&#x2F;h3&gt;
+&lt;p&gt;象数派。从自然物象洞悉天文，用数学逻辑表达规律。
+义理派。透过研究象数和图文，抽象表达原理和意义。&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+</feed>
