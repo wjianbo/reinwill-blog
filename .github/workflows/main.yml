@@ -9,7 +9,12 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Install Zola
-        uses: shalzz/zola-deploy-action@v0.17.2
+        run: |
+          ZOLA_VERSION=$(curl -s "https://api.github.com/repos/getzola/zola/releases/latest" | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/')
+          curl -L "https://github.com/getzola/zola/releases/download/${ZOLA_VERSION}/zola-${ZOLA_VERSION}-x86_64-unknown-linux-gnu.tar.gz" -o zola.tar.gz
+          tar -xzf zola.tar.gz
+          sudo mv zola /usr/local/bin/zola
+          rm zola.tar.gz
 
       - name: Build Zola site
         run: zola build
