@@ -78,7 +78,9 @@
         <div class="flex-1 flex items-center">
           <div class="flex-shrink-0 flex items-center ml-2">
             <!--<a href="/" class="text-xl text-gray-800 dark:text-white">{{config.title}}</a>-->
-            <img class="hidden lg:block h-14 w-auto" src="{{config.extra.logo}}" alt="{{config.title}}">
+            <a href="{{config.base_url}}/">
+              <img class="hidden lg:block h-14 w-auto" src="{{config.base_url}}/{{config.extra.logo}}" alt="{{config.title}}">
+            </a>
             <div class="text-sm text-gray-500 dark:text-white px-2">
               <p>{{config.extra.description}}</p>
               <p>{{config.extra.description2}}</p>
