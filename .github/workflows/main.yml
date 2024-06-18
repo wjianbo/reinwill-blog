@@ -17,7 +17,7 @@ jobs:
           rm zola.tar.gz
 
       - name: Build Zola site
-        run: zola build
+        run: git submodule update --init && zola build
 
       - name: Install Node.js
         uses: actions/setup-node@v3
