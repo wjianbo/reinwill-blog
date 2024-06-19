@@ -6,9 +6,9 @@
   <script src="{{config.base_url}}/pagefind/pagefind-ui.js"></script>
   <div id="search"></div>
   <script>
-      window.addEventListener('DOMContentLoaded', (event) => {
-          new PagefindUI({ element: "#search", showSubResults: true });
-      });
-  </script> 
+    window.addEventListener('DOMContentLoaded', (event) => {
+      new PagefindUI({ element: "#search", showSubResults: true, showImages: false });
+    });
+  </script>
 </div>
 {% endblock content %}
