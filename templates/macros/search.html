@@ -1,0 +1,10 @@
+{% macro render(id) %}
+<link href="{{config.base_url}}/pagefind/pagefind-ui.css" rel="stylesheet">
+<script src="{{config.base_url}}/pagefind/pagefind-ui.js"></script>
+<div id="{{id}}"></div>
+<script>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    new PagefindUI({ element: "#{{id}}", showSubResults: true, showImages: false });
+  });
+</script>
+{% endmacro %}
