@@ -315,7 +315,7 @@
               <!-- Panel -->
               <div x-ref="panel" x-show="open" x-transition.origin.top.left x-on:click.outside="close($refs.button)"
                 :id="$id('dropdown-button')" style="display: none;bottom: 2em; left: 0;"
-                class="absolute left-0 mt-2 w-40 rounded-md shadow-md dark:text-white">
+                class="absolute left-0 mb-2 w-20 bg-white dark:text-white">
                 {% for page in item.pages %}
                 <a href="{{page.permalink}}"
                   class="flex items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left text-sm hover:bg-gray-50 disabled:text-gray-500">
