@@ -2,7 +2,8 @@
 {% import "macros/search.html" as search %}
 
 {% block content %}
-<div class="flex items-center flex-col mt-60">
-{{ search::render(id="search-box") }}
+<div class="flex items-center flex-col gap-y-2">
+  {{ search::render(id="search-box") }}
+  <p class="text-gray-500">{{ config.extra.search_label }}</p>
 </div>
 {% endblock content %}
