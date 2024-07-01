@@ -1,7 +1,7 @@
 # The URL the site will be built for
 base_url = "https://wjianbo.github.io/reinwill-blog"
 
-title = "reinwill"
+title = "壬吾学社"
 description = "A blog about web development, devops"
 default_language = "zh"
 
