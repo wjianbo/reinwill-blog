@@ -20,3 +20,7 @@ button:hover {
   --pagefind-ui-border-width: 0px;
   --pagefind-ui-border-radius: 0px;
 }
+
+.pagefind-ui__drawer {
+  background-color: white !important;
+}
