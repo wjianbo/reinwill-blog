@@ -80,8 +80,7 @@
           <div class="flex-shrink-0 flex items-center ml-2">
             <!--<a href="/" class="text-xl text-gray-800 dark:text-white">reinwill</a>-->
             <a href="https:&#x2F;&#x2F;wjianbo.github.io&#x2F;reinwill-blog/">
-              <img class="h-14 w-auto" src="https:&#x2F;&#x2F;wjianbo.github.io&#x2F;reinwill-blog/logo.png"
-                alt="reinwill">
+              <img class="h-14 w-auto" src="https:&#x2F;&#x2F;wjianbo.github.io&#x2F;reinwill-blog/logo.png" alt="reinwill">
             </a>
             <div class="text-sm text-gray-500 dark:text-white px-2">
               <p>帝禹江河湖海流，辛壬癸甲</p>
@@ -158,18 +157,20 @@
   <!---------------------------------------------------------->
   <footer
     class="max-w-6xl mx-auto relative pt-1 border-t-1 border-gray-300 dark:border-gray-200 dark:text-white w-full sm:px-2">
-    <div class="mt-10 flex items-center gap-x-4">
-      <div class="h-1 flex-auto bg-gray-700 dark:bg-white"></div>
-      <h4 class="flex-none text-sm font-semibold leading-6">文脉</h4>
-      <div class="h-1 flex-auto bg-gray-700 dark:bg-white"></div>
-    </div>
-    <div class="mt-3 flex flex-col items-center">
-      
-      <div class="container mx-auto px-6">
-        <div class="mt-8 sm:mt-0 sm:w-full sm:px-8 flex flex-col md:flex-row justify-center divide-x">
+    <div class="mt-10 grid grid-cols-2 gap-x-8 gap-y-10 lg:grid-cols-3">
+      <div>
+        <div class="mt-10 flex items-center gap-x-4">
+          <div class="h-1 flex-auto bg-gray-700 dark:bg-white"></div>
+          <h4 class="flex-none text-sm font-semibold leading-6">文脉</h4>
+          <div class="h-1 flex-auto bg-gray-700 dark:bg-white"></div>
+        </div>
+        <div class="mt-3 flex flex-col items-center">
           
-          <div class="px-1 flex flex-col">
-            <div x-data="{
+          <div class="container mx-auto px-6">
+            <div class="mt-8 sm:mt-0 sm:w-full sm:px-8 flex flex-col md:flex-row justify-center divide-x divide-black h-2">
+              
+              <div class="px-1 flex flex-col">
+                <div x-data="{
             open: false,
             toggle() {
                 if (this.open) {
@@ -188,30 +189,31 @@
                 focusAfter && focusAfter.focus()
             }
         }" x-on:keydown.escape.prevent.stop="close($refs.button)"
-              x-on:focusin.window="! $refs.panel.contains($event.target) && close()" x-id="['dropdown-button']"
-              class="relative">
-              <!-- Button -->
-              <button x-ref="button" x-on:click="toggle()" :aria-expanded="open" :aria-controls="$id('dropdown-button')"
-                type="button" class="flex items-center gap-2 px-5 font-bold text-gray-700 dark:text-white">
-                历史
-              </button>
+                  x-on:focusin.window="! $refs.panel.contains($event.target) && close()" x-id="['dropdown-button']"
+                  class="relative">
+                  <!-- Button -->
+                  <button x-ref="button" x-on:click="toggle()" :aria-expanded="open"
+                    :aria-controls="$id('dropdown-button')" type="button"
+                    class="flex items-center gap-2 px-5 font-bold text-gray-700 dark:text-white">
+                    历史
+                  </button>
 
-              <!-- Panel -->
-              <div x-ref="panel" x-show="open" x-transition.origin.top.left x-on:click.outside="close($refs.button)"
-                :id="$id('dropdown-button')" style="display: none;bottom: 2em; left: 0;"
-                class="absolute left-0 mb-2 w-20 bg-white dark:text-white">
-                
-                <a href="https:&#x2F;&#x2F;wjianbo.github.io&#x2F;reinwill-blog&#x2F;culture&#x2F;shang-gu&#x2F;"
-                  class="flex items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left text-sm hover:bg-gray-50 disabled:text-gray-500">
-                  上古
-                </a>
-                
+                  <!-- Panel -->
+                  <div x-ref="panel" x-show="open" x-transition.origin.top.left x-on:click.outside="close($refs.button)"
+                    :id="$id('dropdown-button')" style="display: none;bottom: 2em; left: 0;"
+                    class="absolute left-0 mb-2 w-20 bg-white dark:text-white">
+                    
+                    <a href="https:&#x2F;&#x2F;wjianbo.github.io&#x2F;reinwill-blog&#x2F;culture&#x2F;shang-gu&#x2F;"
+                      class="flex items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left text-sm hover:bg-gray-50 disabled:text-gray-500">
+                      上古
+                    </a>
+                    
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-          
-          <div class="px-1 flex flex-col">
-            <div x-data="{
+              
+              <div class="px-1 flex flex-col">
+                <div x-data="{
             open: false,
             toggle() {
                 if (this.open) {
@@ -230,30 +232,114 @@
                 focusAfter && focusAfter.focus()
             }
         }" x-on:keydown.escape.prevent.stop="close($refs.button)"
-              x-on:focusin.window="! $refs.panel.contains($event.target) && close()" x-id="['dropdown-button']"
-              class="relative">
-              <!-- Button -->
-              <button x-ref="button" x-on:click="toggle()" :aria-expanded="open" :aria-controls="$id('dropdown-button')"
-                type="button" class="flex items-center gap-2 px-5 font-bold text-gray-700 dark:text-white">
-                文化
-              </button>
+                  x-on:focusin.window="! $refs.panel.contains($event.target) && close()" x-id="['dropdown-button']"
+                  class="relative">
+                  <!-- Button -->
+                  <button x-ref="button" x-on:click="toggle()" :aria-expanded="open"
+                    :aria-controls="$id('dropdown-button')" type="button"
+                    class="flex items-center gap-2 px-5 font-bold text-gray-700 dark:text-white">
+                    文化
+                  </button>
 
-              <!-- Panel -->
-              <div x-ref="panel" x-show="open" x-transition.origin.top.left x-on:click.outside="close($refs.button)"
-                :id="$id('dropdown-button')" style="display: none;bottom: 2em; left: 0;"
-                class="absolute left-0 mb-2 w-20 bg-white dark:text-white">
-                
-                <a href="https:&#x2F;&#x2F;wjianbo.github.io&#x2F;reinwill-blog&#x2F;culture&#x2F;yi-xue&#x2F;"
-                  class="flex items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left text-sm hover:bg-gray-50 disabled:text-gray-500">
-                  易学
-                </a>
-                
+                  <!-- Panel -->
+                  <div x-ref="panel" x-show="open" x-transition.origin.top.left x-on:click.outside="close($refs.button)"
+                    :id="$id('dropdown-button')" style="display: none;bottom: 2em; left: 0;"
+                    class="absolute left-0 mb-2 w-20 bg-white dark:text-white">
+                    
+                    <a href="https:&#x2F;&#x2F;wjianbo.github.io&#x2F;reinwill-blog&#x2F;culture&#x2F;yi-xue&#x2F;"
+                      class="flex items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left text-sm hover:bg-gray-50 disabled:text-gray-500">
+                      易学
+                    </a>
+                    
+                  </div>
+                </div>
               </div>
+              
             </div>
           </div>
-          
         </div>
       </div>
+      
+
+<div>
+  <div class="mt-10 flex items-center gap-x-4">
+    <div class="h-1 flex-auto bg-gray-700 dark:bg-white"></div>
+    <h4 class="flex-none text-sm font-semibold leading-6">社区</h4>
+    <div class="h-1 flex-auto bg-gray-700 dark:bg-white"></div>
+  </div>
+  <div class="mt-3 flex flex-col items-center">
+    
+    <div class="mt-8 sm:mt-0 sm:w-full sm:px-8 flex flex-col md:flex-row justify-center h-2 divide-x divide-black">
+      
+      <div class="px-2 flex flex-col">
+        <a class="font-bold text-gray-700 dark:text-white" href="#">
+          我感谢
+        </a>
+      </div>
+      
+      <div class="px-2 flex flex-col">
+        <a class="font-bold text-gray-700 dark:text-white" href="#">
+          我举报
+        </a>
+      </div>
+      
+      <div class="px-2 flex flex-col">
+        <a class="font-bold text-gray-700 dark:text-white" href="#">
+          我提议
+        </a>
+      </div>
+      
+      <div class="px-2 flex flex-col">
+        <a class="font-bold text-gray-700 dark:text-white" href="#">
+          我发表
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+<div>
+  <div class="mt-10 flex items-center gap-x-4">
+    <div class="h-1 flex-auto bg-gray-700 dark:bg-white"></div>
+    <h4 class="flex-none text-sm font-semibold leading-6">壬吾</h4>
+    <div class="h-1 flex-auto bg-gray-700 dark:bg-white"></div>
+  </div>
+  <div class="mt-3 flex flex-col items-center">
+    
+    <div class="mt-8 sm:mt-0 sm:w-full sm:px-8 flex flex-col md:flex-row justify-center h-2 divide-x divide-black">
+      
+      <div class="px-2 flex flex-col">
+        <a class="font-bold text-gray-700 dark:text-white" href="#">
+          动态
+        </a>
+      </div>
+      
+      <div class="px-2 flex flex-col">
+        <a class="font-bold text-gray-700 dark:text-white" href="#">
+          商城
+        </a>
+      </div>
+      
+      <div class="px-2 flex flex-col">
+        <a class="font-bold text-gray-700 dark:text-white" href="#">
+          合作
+        </a>
+      </div>
+      
+      <div class="px-2 flex flex-col">
+        <a class="font-bold text-gray-700 dark:text-white" href="#">
+          理念
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+
+    </div>
+    <div class="mt-3 flex flex-col items-center">
       <div class="sm:w-2/3 text-center py-6 dark:text-white">
         
         <p class="text-sm text-gray-500 dark:text-white mb-2">
