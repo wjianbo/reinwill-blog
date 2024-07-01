@@ -11,8 +11,8 @@ theme = "blow"
 compile_sass = true
 
 taxonomies = [
-    {name = "tags", paginate_by = 5, feed = true},
-    {name = "categories", paginate_by = 5, feed = true},
+    { name = "tags", paginate_by = 5, feed = true },
+    { name = "categories", paginate_by = 5, feed = true },
 ]
 
 # Whether to build a search index to be used later on by a JavaScript library
@@ -28,6 +28,22 @@ highlight_code = false
 logo = "logo.png"
 description = "帝禹江河湖海流，辛壬癸甲"
 description2 = "置身家国天下事，以吾知名"
-footer_texts = ["落实好人好报 惩戒坏人坏事 促进共建共享 鼓励原生原创",
-    "All rights reserved © REINWILL  沪ICP备2021036153号"]
+footer_texts = [
+    "落实好人好报 惩戒坏人坏事 促进共建共享 鼓励原生原创",
+    "All rights reserved © REINWILL  沪ICP备2021036153号",
+]
 search_label = "输入关键词，发现中国美"
+links = [
+    { group_name = "社区", links = [
+        { label = "我感谢", url = "#" },
+        { label = "我举报", url = "#" },
+        { label = "我提议", url = "#" },
+        { label = "我发表", url = "#" },
+    ] },
+    { group_name = "壬吾", links = [
+        { label = "动态", url = "#" },
+        { label = "商城", url = "#" },
+        { label = "合作", url = "#" },
+        { label = "理念", url = "#" },
+    ] },
+]
