@@ -174,21 +174,21 @@
   <!------------------------- FOOTER ------------------------->
   <!---------------------------------------------------------->
   <footer
-    class="max-w-6xl mx-auto relative pt-1 border-t-1 border-gray-300 dark:border-gray-200 dark:text-white w-full sm:px-2">
-    <div class="mt-10 grid grid-cols-2 gap-x-8 gap-y-10 lg:grid-cols-3">
+    class="max-w-6xl mx-auto relative pt-1 border-t-1 border-gray-300 dark:border-gray-200 dark:text-white w-full px-2">
+    <div class="mt-10 grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-3">
       <div>
-        <div class="mt-10 flex items-center gap-x-4">
+        <div class="mt-10 flex items-center gap-x-1">
           <div class="h-1 flex-auto bg-gray-700 dark:bg-white"></div>
           <h4 class="flex-none text-sm font-semibold leading-6">文脉</h4>
           <div class="h-1 flex-auto bg-gray-700 dark:bg-white"></div>
         </div>
-          
-  <div class="flex justify-center divide-x divide-black mt-2">
-            <div
-              class="mt-8 sm:mt-0 sm:w-full sm:px-8 flex flex-col md:flex-row justify-center divide-x divide-black h-2">
-              
-              <div class="px-2 flex flex-col items-center justify-center h-2">
-                <div x-data="{
+        
+        <div class="flex justify-center divide-x divide-black mt-2">
+          <div
+            class="sm:w-full sm:px-8 flex flex-row justify-center divide-x divide-black h-2">
+            
+            <div class="px-2 flex flex-col items-center justify-center h-2">
+              <div x-data="{
             open: false,
             toggle() {
                 if (this.open) {
@@ -207,78 +207,78 @@
                 focusAfter && focusAfter.focus()
             }
         }" x-on:keydown.escape.prevent.stop="close($refs.button)"
-                  x-on:focusin.window="! $refs.panel.contains($event.target) && close()" x-id="['dropdown-button']"
-                  class="relative">
-                  <!-- Button -->
-                  <button x-ref="button" x-on:click="toggle()" :aria-expanded="open"
-                    :aria-controls="$id('dropdown-button')" type="button"
-                    class="flex items-center gap-2 px-5 font-bold text-gray-700 dark:text-white">
-                    历史
-                  </button>
+                x-on:focusin.window="! $refs.panel.contains($event.target) && close()" x-id="['dropdown-button']"
+                class="relative">
+                <!-- Button -->
+                <button x-ref="button" x-on:click="toggle()" :aria-expanded="open"
+                  :aria-controls="$id('dropdown-button')" type="button"
+                  class="flex items-center gap-2 px-5 font-bold text-gray-700 dark:text-white">
+                  历史
+                </button>
 
-                  <!-- Panel -->
-                  <div x-ref="panel" x-show="open" x-transition.origin.top.left x-on:click.outside="close($refs.button)"
-                    :id="$id('dropdown-button')" style="display: none;bottom: 2em; left: 0;"
-                    class="absolute left-0 mb-2 w-20 bg-white dark:text-white">
-                    
-                    <a href="https:&#x2F;&#x2F;wjianbo.github.io&#x2F;reinwill-blog&#x2F;culture&#x2F;shang-gu&#x2F;"
-                      class="flex items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left text-sm hover:bg-gray-50 disabled:text-gray-500">
-                      上古
-                    </a>
-                    
-                  </div>
+                <!-- Panel -->
+                <div x-ref="panel" x-show="open" x-transition.origin.top.left x-on:click.outside="close($refs.button)"
+                  :id="$id('dropdown-button')" style="display: none;bottom: 2em; left: 0;"
+                  class="absolute left-0 mb-2 w-20 bg-white dark:text-white">
+                  
+                  <a href="https:&#x2F;&#x2F;wjianbo.github.io&#x2F;reinwill-blog&#x2F;culture&#x2F;shang-gu&#x2F;"
+                    class="flex items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left text-sm hover:bg-gray-50 disabled:text-gray-500">
+                    上古
+                  </a>
+                  
                 </div>
               </div>
-              
-              <div class="px-2 flex flex-col items-center justify-center h-2">
-                <div x-data="{
-            open: false,
-            toggle() {
-                if (this.open) {
-                    return this.close()
-                }
-
-                this.$refs.button.focus()
-
-                this.open = true
-            },
-            close(focusAfter) {
-                if (! this.open) return
-
-                this.open = false
-
-                focusAfter && focusAfter.focus()
-            }
-        }" x-on:keydown.escape.prevent.stop="close($refs.button)"
-                  x-on:focusin.window="! $refs.panel.contains($event.target) && close()" x-id="['dropdown-button']"
-                  class="relative">
-                  <!-- Button -->
-                  <button x-ref="button" x-on:click="toggle()" :aria-expanded="open"
-                    :aria-controls="$id('dropdown-button')" type="button"
-                    class="flex items-center gap-2 px-5 font-bold text-gray-700 dark:text-white">
-                    文化
-                  </button>
-
-                  <!-- Panel -->
-                  <div x-ref="panel" x-show="open" x-transition.origin.top.left x-on:click.outside="close($refs.button)"
-                    :id="$id('dropdown-button')" style="display: none;bottom: 2em; left: 0;"
-                    class="absolute left-0 mb-2 w-20 bg-white dark:text-white">
-                    
-                    <a href="https:&#x2F;&#x2F;wjianbo.github.io&#x2F;reinwill-blog&#x2F;culture&#x2F;yi-xue&#x2F;"
-                      class="flex items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left text-sm hover:bg-gray-50 disabled:text-gray-500">
-                      易学
-                    </a>
-                    
-                  </div>
-                </div>
-              </div>
-              
             </div>
+            
+            <div class="px-2 flex flex-col items-center justify-center h-2">
+              <div x-data="{
+            open: false,
+            toggle() {
+                if (this.open) {
+                    return this.close()
+                }
+
+                this.$refs.button.focus()
+
+                this.open = true
+            },
+            close(focusAfter) {
+                if (! this.open) return
+
+                this.open = false
+
+                focusAfter && focusAfter.focus()
+            }
+        }" x-on:keydown.escape.prevent.stop="close($refs.button)"
+                x-on:focusin.window="! $refs.panel.contains($event.target) && close()" x-id="['dropdown-button']"
+                class="relative">
+                <!-- Button -->
+                <button x-ref="button" x-on:click="toggle()" :aria-expanded="open"
+                  :aria-controls="$id('dropdown-button')" type="button"
+                  class="flex items-center gap-2 px-5 font-bold text-gray-700 dark:text-white">
+                  文化
+                </button>
+
+                <!-- Panel -->
+                <div x-ref="panel" x-show="open" x-transition.origin.top.left x-on:click.outside="close($refs.button)"
+                  :id="$id('dropdown-button')" style="display: none;bottom: 2em; left: 0;"
+                  class="absolute left-0 mb-2 w-20 bg-white dark:text-white">
+                  
+                  <a href="https:&#x2F;&#x2F;wjianbo.github.io&#x2F;reinwill-blog&#x2F;culture&#x2F;yi-xue&#x2F;"
+                    class="flex items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left text-sm hover:bg-gray-50 disabled:text-gray-500">
+                    易学
+                  </a>
+                  
+                </div>
+              </div>
+            </div>
+            
           </div>
+        </div>
       </div>
       
 
-<div>
+<div class="hidden lg:block">
   <div class="mt-10 flex items-center gap-x-4">
     <div class="h-1 flex-auto bg-gray-700 dark:bg-white"></div>
     <h4 class="flex-none text-sm font-semibold leading-6">社区</h4>
@@ -313,7 +313,7 @@
   </div>
 </div>
 
-<div>
+<div class="hidden lg:block">
   <div class="mt-10 flex items-center gap-x-4">
     <div class="h-1 flex-auto bg-gray-700 dark:bg-white"></div>
     <h4 class="flex-none text-sm font-semibold leading-6">壬吾</h4>
