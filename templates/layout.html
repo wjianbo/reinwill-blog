@@ -273,21 +273,21 @@
   <!------------------------- FOOTER ------------------------->
   <!---------------------------------------------------------->
   <footer
-    class="max-w-6xl mx-auto relative pt-1 border-t-1 border-gray-300 dark:border-gray-200 dark:text-white w-full sm:px-2">
-    <div class="mt-10 grid grid-cols-2 gap-x-8 gap-y-10 lg:grid-cols-3">
+    class="max-w-6xl mx-auto relative pt-1 border-t-1 border-gray-300 dark:border-gray-200 dark:text-white w-full px-2">
+    <div class="mt-10 grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-3">
       <div>
-        <div class="mt-10 flex items-center gap-x-4">
+        <div class="mt-10 flex items-center gap-x-1">
           <div class="h-1 flex-auto bg-gray-700 dark:bg-white"></div>
           <h4 class="flex-none text-sm font-semibold leading-6">文脉</h4>
           <div class="h-1 flex-auto bg-gray-700 dark:bg-white"></div>
         </div>
-          {% set categories = get_taxonomy(kind="categories") %}
-  <div class="flex justify-center divide-x divide-black mt-2">
-            <div
-              class="mt-8 sm:mt-0 sm:w-full sm:px-8 flex flex-col md:flex-row justify-center divide-x divide-black h-2">
-              {% for item in categories.items %}
-              <div class="px-2 flex flex-col items-center justify-center h-2">
-                <div x-data="{
+        {% set categories = get_taxonomy(kind="categories") %}
+        <div class="flex justify-center divide-x divide-black mt-2">
+          <div
+            class="sm:w-full sm:px-8 flex flex-row justify-center divide-x divide-black h-2">
+            {% for item in categories.items %}
+            <div class="px-2 flex flex-col items-center justify-center h-2">
+              <div x-data="{
             open: false,
             toggle() {
                 if (this.open) {
@@ -306,31 +306,31 @@
                 focusAfter && focusAfter.focus()
             }
         }" x-on:keydown.escape.prevent.stop="close($refs.button)"
-                  x-on:focusin.window="! $refs.panel.contains($event.target) && close()" x-id="['dropdown-button']"
-                  class="relative">
-                  <!-- Button -->
-                  <button x-ref="button" x-on:click="toggle()" :aria-expanded="open"
-                    :aria-controls="$id('dropdown-button')" type="button"
-                    class="flex items-center gap-2 px-5 font-bold text-gray-700 dark:text-white">
-                    {{item.name}}
-                  </button>
+                x-on:focusin.window="! $refs.panel.contains($event.target) && close()" x-id="['dropdown-button']"
+                class="relative">
+                <!-- Button -->
+                <button x-ref="button" x-on:click="toggle()" :aria-expanded="open"
+                  :aria-controls="$id('dropdown-button')" type="button"
+                  class="flex items-center gap-2 px-5 font-bold text-gray-700 dark:text-white">
+                  {{item.name}}
+                </button>
 
-                  <!-- Panel -->
-                  <div x-ref="panel" x-show="open" x-transition.origin.top.left x-on:click.outside="close($refs.button)"
-                    :id="$id('dropdown-button')" style="display: none;bottom: 2em; left: 0;"
-                    class="absolute left-0 mb-2 w-20 bg-white dark:text-white">
-                    {% for page in item.pages %}
-                    <a href="{{page.permalink}}"
-                      class="flex items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left text-sm hover:bg-gray-50 disabled:text-gray-500">
-                      {{page.title}}
-                    </a>
-                    {% endfor %}
-                  </div>
+                <!-- Panel -->
+                <div x-ref="panel" x-show="open" x-transition.origin.top.left x-on:click.outside="close($refs.button)"
+                  :id="$id('dropdown-button')" style="display: none;bottom: 2em; left: 0;"
+                  class="absolute left-0 mb-2 w-20 bg-white dark:text-white">
+                  {% for page in item.pages %}
+                  <a href="{{page.permalink}}"
+                    class="flex items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left text-sm hover:bg-gray-50 disabled:text-gray-500">
+                    {{page.title}}
+                  </a>
+                  {% endfor %}
                 </div>
               </div>
-              {% endfor %}
             </div>
+            {% endfor %}
           </div>
+        </div>
       </div>
       {{ links::render(link_groups = config.extra.links) }}
     </div>

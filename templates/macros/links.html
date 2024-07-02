@@ -1,6 +1,6 @@
 {% macro render(link_groups) %}
 {% for g in link_groups %}
-<div>
+<div class="hidden lg:block">
   <div class="mt-10 flex items-center gap-x-4">
     <div class="h-1 flex-auto bg-gray-700 dark:bg-white"></div>
     <h4 class="flex-none text-sm font-semibold leading-6">{{ g.group_name }}</h4>
