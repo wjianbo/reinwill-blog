@@ -2,7 +2,7 @@
 {% import "macros/sidebar.html" as sidebar %}
 
 {% block content %}
-<div class="flex gap-x-8">
+<div class="flex gap-x-8 flex-col sm:flex-row">
   <div
     class="flex flex-col sm:w-3/4 w-full border border-2 border-black dark:border-black rounded-xl p-5 shadow-2xl dark:bg-gray-800">
 
@@ -20,7 +20,7 @@
 
   </div>
 
-  <div class="hidden sm:block sm:w-1/4 sm:flex sm:items-center sm:flex-col sm:w-1/5">
+  <div class="sm:w-1/4 sm:flex sm:items-center sm:flex-col sm:w-1/5 py-4 sm:py-0">
     {{ sidebar::render(page=page)}}
 
     <!-- Table of content -->
